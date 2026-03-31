@@ -123,8 +123,10 @@ function Hero() {
                                     name="department"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                                <FormControl>
+                                            <Select
+                                                onValueChange={field.onChange}
+                                                value={field.value} // ✅ fondamentale
+                                            >                                                <FormControl>
                                                     <SelectTrigger className="bg-white/5 border-white/10 focus:border-primary">
                                                         <SelectValue placeholder="Department" />
                                                     </SelectTrigger>
@@ -151,7 +153,10 @@ function Hero() {
                                     name="doctorId"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                <Select
+                                                    onValueChange={field.onChange}
+                                                    value={field.value} // ✅ fondamentale
+                                                >
                                                 <FormControl>
                                                     <SelectTrigger className="bg-white/5 border-white/10 focus:border-primary">
                                                         <SelectValue placeholder="Select Doctor" />
@@ -183,7 +188,7 @@ function Hero() {
                                             <Textarea
                                                 placeholder="Please describe your symptoms or any special requirements..."
                                                 {...field}
-                                                className="bg-white/5 border-white/10 focus:border-primary min-h-[100px] resize-none"
+                                                className="bg-white/5 border-white/10 focus:border-primary min-h-25 resize-none"
                                             />
                                         </FormControl>
                                         <FormMessage />
