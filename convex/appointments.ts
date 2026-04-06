@@ -102,6 +102,7 @@ export const getAppointments = query({
         );
     },
 });
+
 export const myAppointments = query({
     args: {},
     handler: async (ctx) => {

@@ -5,7 +5,7 @@ import { useQuery } from 'convex/react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react'
-import DoctorCard from '@/components/DoctorCrad'
+import DoctorCard from '@/components/DoctorCard'
 
 
 export default function TopDoctors() {

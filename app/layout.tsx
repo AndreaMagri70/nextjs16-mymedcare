@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import ConvexClientProvider from "@/components/convexclientprovider";
 import Header from "@/components/header";
 import { Toaster } from "@/components/ui/sonner";
+import ConditionalChatbot from "@/components/ConditionalChatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,17 +35,18 @@ export default function RootLayout({
       className={`${geistSans.className} ${geistMono.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-
         <ConvexClientProvider>
           <Header />
-        {children}
+          {children}
+          <Footer />
+          
+          {/* ✅ Chatbot DENTRO il body */}
+          <ConditionalChatbot />
+          
+          <Toaster />
         </ConvexClientProvider>
-        <Footer />
-        <Toaster />
-
-        </body>
-      
-    </html>
+      </body>
+    </html>   
     
   );
 }
